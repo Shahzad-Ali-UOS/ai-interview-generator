@@ -1,0 +1,86 @@
+[
+  {
+    "id": "ML-01",
+    "track": "Machine Learning",
+    "type": "Technical",
+    "topic": "Feature Engineering & Preprocessing",
+    "difficulty": "Intermediate",
+    "question": "How do you handle categorical variables with high cardinality in tree-based algorithms versus linear models, and how would you prevent data leakage during target encoding?",
+    "ideal_answer": "For linear models, high cardinality causes sparse dimensionality via one-hot encoding; frequency encoding or target encoding with k-fold regularization is preferred. For tree algorithms like LightGBM/CatBoost, native target statistics work directly. To prevent data leakage, compute target encodings strictly on out-of-fold training sets.",
+    "evaluation_criteria": [
+      "Distinguishes handling between linear vs. tree-based models",
+      "Identifies out-of-fold target calculation to prevent target leakage",
+      "Mentions dimensionality reduction or frequency/target encoding techniques"
+    ]
+  },
+  {
+    "id": "ML-02",
+    "track": "Machine Learning",
+    "type": "Technical",
+    "topic": "Model Evaluation & Bias-Variance",
+    "difficulty": "Foundational",
+    "question": "If your intern evaluation model exhibits 99% training accuracy but 68% validation accuracy on test cohorts, diagnose the root causes and outline your remediation steps.",
+    "ideal_answer": "This signifies extreme overfitting (high variance). Causes include high model complexity, redundant features, or small sample size. Remediation: apply L1/L2 regularization, reduce tree depth/complexity, introduce early stopping, increase cross-validation folds, or gather more training data.",
+    "evaluation_criteria": [
+      "Identifies high variance / overfitting immediately",
+      "Proposes appropriate regularization (L1/L2, dropout, tree pruning)",
+      "Recommends robust validation strategies (Stratified K-Fold)"
+    ]
+  },
+  {
+    "id": "BE-01",
+    "track": "Backend Development",
+    "type": "Technical",
+    "topic": "API Design & Asynchronous Processing",
+    "difficulty": "Intermediate",
+    "question": "Explain how you would design an asynchronous report generation endpoint in FastAPI or Django REST Framework to ensure the HTTP worker does not block under heavy load.",
+    "ideal_answer": "Decouple request handling from execution using a message queue like Celery or Redis Queue. The endpoint immediately returns an HTTP 202 Accepted status with a task ID. Background worker processes the payload, updates database state, and the client polls the status endpoint or receives a webhook notification.",
+    "evaluation_criteria": [
+      "Leverages an asynchronous message broker (Redis/Celery/RabbitMQ)",
+      "Returns proper HTTP status (202 Accepted with polling token)",
+      "Addresses worker thread pool saturation"
+    ]
+  },
+  {
+    "id": "BE-02",
+    "track": "Backend Development",
+    "type": "Technical",
+    "topic": "Database Optimization",
+    "difficulty": "Advanced",
+    "question": "In a relational database (PostgreSQL), describe what an N+1 query problem is, how it manifests in ORM queries, and how you resolve it in Django or SQLAlchemy.",
+    "ideal_answer": "N+1 occurs when fetching a parent record requires 1 query, and iterating through child relations fires N individual database hits. In Django ORM, resolve via 'select_related' for foreign-key one-to-one joins (SQL JOIN) or 'prefetch_related' for many-to-many/reverse lookups via batched IN queries.",
+    "evaluation_criteria": [
+      "Defines the N+1 database querying penalty",
+      "Differentiates 'select_related' (JOIN) and 'prefetch_related' (batched lookups)",
+      "Mentions indexing and query profiling using EXPLAIN ANALYZE"
+    ]
+  },
+  {
+    "id": "BEH-01",
+    "track": "Behavioral",
+    "type": "Behavioral",
+    "topic": "Conflict Resolution & Deadlines (STAR)",
+    "difficulty": "Intermediate",
+    "question": "Tell me about a time when a project sprint deadline was approaching, but team members disagreed on technical direction. How did you resolve the deadlock?",
+    "ideal_answer": "Candidate should use the STAR method: explain the specific technical disagreement (Situation/Task), how they facilitated an objective criteria evaluation or proof-of-concept benchmark rather than personal preference (Action), and how they met the delivery milestone on time (Result).",
+    "evaluation_criteria": [
+      "Follows STAR framework clearly",
+      "Demonstrates objective, data-driven decision making",
+      "Shows constructive teamwork without defensive behavior"
+    ]
+  },
+  {
+    "id": "BEH-02",
+    "track": "Behavioral",
+    "type": "Behavioral",
+    "topic": "Ownership & Failure Handling (STAR)",
+    "difficulty": "Foundational",
+    "question": "Describe an instance during an internship or academic project where your code or architecture caused a regression or failed to meet expectations. How did you manage it?",
+    "ideal_answer": "Candidate should exhibit ownership: immediately flag the regression to mentors/peers, roll back or patch the issue using git/tests, conduct a post-mortem to determine root cause, and implement automated validation to prevent recurrence.",
+    "evaluation_criteria": [
+      "Takes personal accountability without shifting blame",
+      "Explains fast mitigation and rollback steps",
+      "Outlines preventive systems (unit tests, CI checks) adopted afterward"
+    ]
+  }
+]

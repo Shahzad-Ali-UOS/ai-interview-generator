@@ -1,0 +1,26 @@
+[
+  {
+    "intern_id": "CAND-01",
+    "name": "Ahmed Raza",
+    "target_track": "Machine Learning",
+    "experience_level": "Undergraduate Intern",
+    "skills": ["Python", "Pandas", "Scikit-Learn", "XGBoost", "PyTorch", "Streamlit", "Git"],
+    "projects": [
+      "Intern Performance Predictor using XGBoost and Streamlit",
+      "Feedback Sentiment Analysis Engine with TF-IDF"
+    ],
+    "bio": "Final-year Computer Science student passionate about applied machine learning pipelines, predictive modeling, and model deployment."
+  },
+  {
+    "intern_id": "CAND-02",
+    "name": "Fatima Noor",
+    "target_track": "Backend Development",
+    "experience_level": "Undergraduate Intern",
+    "skills": ["Python", "FastAPI", "Django REST Framework", "PostgreSQL", "Docker", "Redis", "Git"],
+    "projects": [
+      "Microservice Authentication Service using FastAPI and JWT",
+      "Async Job Dispatcher with Celery and Redis"
+    ],
+    "bio": "Backend engineering intern focused on RESTful microservice architectures, database optimization, and cloud containerization."
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "job_id": "JD-ML-01",
+    "title": "Machine Learning Engineering Intern",
+    "track": "Machine Learning",
+    "required_skills": ["Python", "Scikit-Learn", "XGBoost", "PyTorch", "Model Evaluation", "Pandas", "Git"],
+    "description": "Looking for an ambitious ML intern to design supervised learning workflows, extract features from structured intern datasets, evaluate models using cross-validation, and ship interactive web prototypes using Streamlit."
+  },
+  {
+    "job_id": "JD-BE-02",
+    "title": "Backend Engineering Intern (Python)",
+    "track": "Backend Development",
+    "required_skills": ["Python", "FastAPI", "Django", "PostgreSQL", "Docker", "REST APIs", "Async Programming"],
+    "description": "Seeking a backend intern to build resilient REST API microservices, optimize relational database queries, manage background workers, and containerize services for scalable deployment."
+  }
+]
